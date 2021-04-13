@@ -1,9 +1,11 @@
-Feature: "Studied State"
-  Scenario Outline: Swith to Studied State
-    Given  a folder state ongoing
-    When the analyst takes action "<Action>"
+Feature: Switch from Received to Ongoing state
+  Scenario Outline: State Ongoing
+    Given  a received folder
+    When the duration "<Duration>" hours is elapsed
     Then the folder state should be  "<State>"
     Examples:
-      | Action | State	 |
-      | True   | studied |
-      | False  | ongoing |
+    | Duration | State |
+    | 0        | received |
+    | 23       | received |
+    | 24       | ongoing  |
+    | 25       | ongoing  |
