@@ -1,4 +1,4 @@
-Feature: "Studied State"
+Feature: "Switch to Studied State"
   Scenario Outline: Swith to Studied State
     Given  a folder state ongoing
     When the analyst takes action "<Action>"
